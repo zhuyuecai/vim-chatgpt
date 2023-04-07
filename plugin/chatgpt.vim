@@ -167,5 +167,6 @@ command! -range  -nargs=? Explain call SendHighlightedCodeToChatGPT('explain', <
 command! -range Review call SendHighlightedCodeToChatGPT('review', <line1>, <line2>, '')
 command! -range -nargs=? Rewrite call SendHighlightedCodeToChatGPT('rewrite', <line1>, <line2>, <q-args>)
 command! -range -nargs=? Test call SendHighlightedCodeToChatGPT('test', <line1>, <line2>, <q-args>)
+command! -range -nargs=? Docstring call SendHighlightedCodeToChatGPT('docstring', <line1>, <line2>, <q-args>)
 command! -range -nargs=? Fix call SendHighlightedCodeToChatGPT('fix', <line1>, <line2>, <q-args>)
 command! GenerateCommit call GenerateCommitMessage()
