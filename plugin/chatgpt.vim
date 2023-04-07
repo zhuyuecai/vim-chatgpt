@@ -103,6 +103,11 @@ function! SendHighlightedCodeToChatGPT(ask, line1, line2, context)
     if len(a:context) > 0
       let prompt = 'I have the following code snippet I would want you to fix, ' . a:context . ':\n' . yanked_text
     endif
+   elseif a:ask == 'docstring'
+    let prompt = 'Can you generate docstring for the following code snippet:\n' . yanked_text
+    if len(a:context) > 0
+      let prompt = 'Can you generate docstring for the following code snippet, ' . a:context . ':\n' . yanked_text
+    endif
 
   endif
 
